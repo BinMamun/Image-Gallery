@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: wheat;
+}
+
+.gallery {
+  width: 1500px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.gallery .image-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 20px;
+  flex: none;
+}
+
+.gallery .image-container img {
+  width: 480px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
