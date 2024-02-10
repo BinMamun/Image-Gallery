@@ -17,7 +17,7 @@ body {
 .gallery .image-container {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 400px 400px 400px;
   grid-gap: 20px;
   padding: 20px;
   flex: none;
@@ -29,5 +29,29 @@ body {
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.5);
+  filter: grayscale(100);
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+.back-btn,
+.next-btn {
+  height: 50px;
+  cursor: pointer;
+}
+
+.gallery .image-container img:hover {
+  filter: grayscale(0);
+  /* transform: scale(1.1); */
 }
